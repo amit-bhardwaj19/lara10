@@ -13,6 +13,8 @@ class Contact extends Model
 
     public function setNameAttribute($value) 
     {
+        \Log::info("method name ". __METHOD__);
+        \Log::info("function name ". __FUNCTION__);
         $this->attributes['name'] = strtolower($value);
     }
 
